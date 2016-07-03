@@ -1,0 +1,18 @@
+<section>
+  <form [ngFormModel]="registrationForm">
+    
+    <br/>
+    <input name="password" type="password" placehold="passoword"  #password='ngForm' [ngFormControl]="registrationForm.controls['password']">
+    <br/>
+    <input name="password-repeat" type="password" placehold="passoword" #confirmPassword='ngForm' [ngFormControl]="registrationForm.controls['confirmPassword']">
+
+    <div class='error' *ngIf="confirmPassword.control.touched">
+      <div *ngIf="registrationForm.hasError('mismatchedPasswords')">Passwords do not match.</div>
+    </div>
+    
+    <button (click)="registered(username.value, password.value)">
+      Sign up To Pager
+    </button>
+  </form>
+  
+</section>

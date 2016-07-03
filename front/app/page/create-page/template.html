@@ -1,0 +1,13 @@
+<div>
+  <form #createPageForm="ngForm">
+
+    <input name="title" placehold="title" #title required
+           [(ngModel)]="model.title">
+    <textarea name="content" [(ngModel)]="model.content"></textarea>
+
+    <button type="submit" (click)="postPage()">
+      post
+    </button>
+  </form>
+  
+</div>

@@ -1,4 +1,7 @@
 <section>
-  <input type="text" placehold="username">
-  <input type="password" placehold="passoword">
+  <input type="text" placehold="username" #username>
+  <input type="password" placehold="passoword" #password>
+  <button (click)="authenticate(username.value, password.value)">
+    Login To Pager
+  </button>
 </section>

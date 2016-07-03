@@ -3,6 +3,8 @@ import { provideRouter, RouterConfig }  from '@angular/router';
 
 import {HomePage} from './page/home/index';
 import {LoginPage} from './page/login/index';
+import {SignUpPage} from './page/sign-up/index';
+import {CreatePagePage} from './page/create-page/index';
 
 export const routes: RouterConfig = [
     {
@@ -17,6 +19,14 @@ export const routes: RouterConfig = [
     {
         path: 'login',
         component: LoginPage
+    },
+    {
+        path: 'sign-up',
+        component: SignUpPage
+    },
+    {
+        path: 'create-page',
+        component: CreatePagePage
     }
 ];
 
