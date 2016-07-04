@@ -19,6 +19,7 @@ function createTables(cb) {
     table.increments();
     table.string('title');
     table.string('content');
+    table.string('type');
     table.timestamps();
   });
   

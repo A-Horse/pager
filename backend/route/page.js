@@ -10,7 +10,16 @@ var xssFilters = require('xss-filters'); //for display
 import {Page} from '../model/page';
 
 PageRouter.get('/page/:id', (req, res, next) => {
-  
+  let id = req.params.id;
+  if( !id ){
+    res.status(400).end();
+  } else {
+    Page.getPageById(id)
+      .then((page) => {
+        console.log(page);
+        res.render('page.ejs', {page: page.toJSON()});
+      });
+  }
 });
 
 PageRouter.post('/page', (req, res, next) => {

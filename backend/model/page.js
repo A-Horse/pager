@@ -57,6 +57,6 @@ export class Page {
   }
 
   static getPageById(id) {
-    
+    return PageModel.where({id: id}).fetch()
   }
 }
